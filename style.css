@@ -6,7 +6,13 @@
 	font-family: monospace;
 }
 main {
-	background-color: aliceblue;
+	background: rgb(0, 131, 29);
+	background: radial-gradient(
+		circle,
+		rgba(0, 131, 29, 1) 0%,
+		rgba(0, 0, 0, 1) 100%,
+		rgba(0, 0, 0, 1) 100%
+	);
 	width: 100vw;
 	height: 100vh;
 	display: flex;
@@ -17,6 +23,8 @@ main {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	max-width: 600px;
+	max-height: 1000px;
 	align-items: center;
 	padding: 3rem;
 	border-radius: 22px;
@@ -38,12 +46,19 @@ main {
 	text-transform: uppercase;
 }
 .result-view {
-	border: 3px solid rgb(255, 255, 255);
-	background-color: beige;
+    display:flex;
+    justify-content: space-between;
+	border: 1px solid rgb(146, 255, 21);
+	background: rgb(194, 230, 20);
+	background: radial-gradient(
+		circle,
+		rgba(194, 230, 20, 0.6334908963585435) 0%,
+		rgba(0, 0, 0, 1) 100%,
+		rgba(0, 0, 0, 1) 100%
+	);
 	border-radius: 12px;
 	width: 90%;
-	height: 5rem;
-	padding: 4rem;
+	padding: 2rem;
 	margin-bottom: 3rem;
 }
 .console {
@@ -90,4 +105,10 @@ p {
 p:hover {
 	transform: scale(1.1);
 	cursor: pointer;
+}
+
+.calculation,
+.viewer {
+	background: none;
+    padding:0.5rem;
 }
