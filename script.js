@@ -5,17 +5,26 @@ const multiply = document.querySelector(".multiply");
 const divide = document.querySelector(".divide");
 const digits = document.querySelector(".digits");
 const digit = document.querySelectorAll(".digits li");
+const operators = document.querySelectorAll(".operators li")
 
-const showInsertion = function (button) {
-	viewer.innerHTML = button;
-};
-showInsertion(12345);
-console.log(digit);
+console.log(operators);
+let operations=[]
 
 digit.forEach(function (number) {
     const clickedNumber = function () {
-        viewer.innerHTML =number.innerText;
+		operations.push(number.innerText)
+        viewer.innerHTML =operations.join('');
+		
     };
 
     number.addEventListener('click', clickedNumber);
+});
+operators.forEach(function (operator) {
+    const clickedOperator = function () {
+		operations.push(operator.innerText)
+        viewer.innerHTML =operations.join('');
+		
+    };
+
+    operator.addEventListener('click', clickedOperator);
 });
